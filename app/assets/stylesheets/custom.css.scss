@@ -42,6 +42,24 @@ body {
   }
 }
 
+.long_lat {
+  background: lightgreen;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* table */
+tbody {
+  td:nth-child(6),
+  td:nth-child(7) {
+    color: white;
+    background-color: #5cb85c!important;
+    &:hover {
+      background-color: #4cae4c!important;
+    }
+  }
+}
+
 
 /* forms */
 #error_explanation {

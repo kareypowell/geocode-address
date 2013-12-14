@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:ofice:spreadsheet"
+  xmlns:html="http://wwww.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">First Name</Data></Cell>
+        <Cell><Data ss:Type="String">Middle Name</Data></Cell>
+        <Cell><Data ss:Type="String">Last Name</Data></Cell>
+        <Cell><Data ss:Type="String">Suffix</Data></Cell>
+        <Cell><Data ss:Type="String">Occupation</Data></Cell>
+        <Cell><Data ss:Type="String">Member Number</Data></Cell>
+        <Cell><Data ss:Type="String">Address</Data></Cell>
+        <Cell><Data ss:Type="String">Address 2</Data></Cell>
+        <Cell><Data ss:Type="String">City</Data></Cell>
+        <Cell><Data ss:Type="String">State</Data></Cell>
+        <Cell><Data ss:Type="String">Zip</Data></Cell>
+        <Cell><Data ss:Type="String">Country</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Phone</Data></Cell>
+        <Cell><Data ss:Type="String">Phone Wk</Data></Cell>
+        <Cell><Data ss:Type="String">Employer</Data></Cell>
+        <Cell><Data ss:Type="String">Activity Code</Data></Cell>
+        <Cell><Data ss:Type="String">Expiration Date</Data></Cell>
+        <Cell><Data ss:Type="String">Longitude</Data></Cell>
+        <Cell><Data ss:Type="String">Latitude</Data></Cell>
+      </Row>
+      <% @members.each do |member| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= member.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.first_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.middle_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.last_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.suffix %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.occupation %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= member.member_number %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.address %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.address_2 %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.city %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.state %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.zip %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.country %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.email %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.phone %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.phone_wk %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.employer %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.activity_code %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.expiration_date %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= member.longitude %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= member.latitude %></Data></Cell>
+      </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

@@ -46,6 +46,7 @@ gem 'jbuilder', '1.5.3'
 gem 'geocoder', '1.1.9'
 gem 'roo', '1.13.0'
 gem 'rest-client', '1.6.7'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 # gem 'font-awesome-rails', '4.0.3.0'
 # gem 'haml'
