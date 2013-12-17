@@ -3,7 +3,8 @@ class MembersController < ApplicationController
 
   #
   def index
-    @members = Member.order(:last_name).load
+    # @members = Member.order(:last_name).load
+    @members = Member.all
     respond_to do |format|
       format.html
       format.json { render json: MembersDatatable.new(view_context) }
@@ -75,10 +76,12 @@ class MembersController < ApplicationController
     end
 
     def member_params
-      params.require(:member).permit(:first_name, :middle_name, :last_name,
-                                     :suffix, :occupation, :member_number,
-                                     :address, :address_2, :city, :state,
-                                     :zip, :country, :email, :phone, :phone_wk,
-                                     :employer, :activity_code, :expiration_date)
+      params.require(:member).permit(
+        :first_name, :middle_name, :last_name, :suffix, :occupation,
+        :member_number, :address, :address_2, :city, :state, :zip, :country,
+        :email, :phone, :phone_wk, :employer, :activity_code, :expiration_date,
+        :longitude, :latitude, :senate_district_no, :senate_name, :senate_phone,
+        :rep_district_no, :rep_name, :rep_phone
+      )
     end
 end

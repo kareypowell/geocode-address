@@ -28,6 +28,12 @@
         <Cell><Data ss:Type="String">Expiration Date</Data></Cell>
         <Cell><Data ss:Type="String">Longitude</Data></Cell>
         <Cell><Data ss:Type="String">Latitude</Data></Cell>
+        <Cell><Data ss:Type="String">Senate District No.</Data></Cell>
+        <Cell><Data ss:Type="String">Senate Name</Data></Cell>
+        <Cell><Data ss:Type="String">Senate Phone</Data></Cell>
+        <Cell><Data ss:Type="String">Rep. District No.</Data></Cell>
+        <Cell><Data ss:Type="String">Rep. Name</Data></Cell>
+        <Cell><Data ss:Type="String">Rep. Phone</Data></Cell>
       </Row>
       <% @members.each do |member| %>
       <Row>
@@ -52,6 +58,12 @@
         <Cell><Data ss:Type="String"><%= member.expiration_date %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= member.longitude %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= member.latitude %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= member.senate_district_no %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.senate_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.senate_phone %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= member.rep_district_no %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.rep_name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= member.rep_phone %></Data></Cell>
       </Row>
       <% end %>
     </Table>

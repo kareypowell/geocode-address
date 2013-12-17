@@ -1,3 +1,5 @@
+require 'resque/server'
+
 GeocodeAddress::Application.routes.draw do
 
   resources :members do
@@ -7,5 +9,7 @@ GeocodeAddress::Application.routes.draw do
   root 'static_pages#home'
   match '/help',  to: 'static_pages#help',  via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
+
+  mount Resque::Server.new, at: "/resque"
 
 end

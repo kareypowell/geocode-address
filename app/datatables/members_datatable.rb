@@ -36,9 +36,15 @@ class MembersDatatable
           # ERB::Util.h(member.phone_wk),
           # ERB::Util.h(member.employer),
           # ERB::Util.h(member.activity_code),
-          # ERB::Util.h(member.expiration_date),
+          ERB::Util.h(member.expiration_date),
           ERB::Util.h(member.longitude),
           ERB::Util.h(member.latitude),
+          ERB::Util.h(member.senate_district_no),
+          ERB::Util.h(member.senate_name),
+          ERB::Util.h(member.senate_phone),
+          ERB::Util.h(member.rep_district_no),
+          ERB::Util.h(member.rep_name),
+          ERB::Util.h(member.rep_phone),
           "#{link_to('Show', member)} | #{link_to('Edit', edit_member_path(member))} | #{link_to('Destroy', member, method: :delete, data: { confirm: 'Are you sure?'})}"
         ]
       end

@@ -19,7 +19,8 @@
 /config/database.yml
 
 # Ignoring environment variables config.
-# /config/application.yml
+/config/initializers/geocoder.rb
+/config/initializers/openstates.rb
 
 # Ignore other unneeded files.
 doc/
