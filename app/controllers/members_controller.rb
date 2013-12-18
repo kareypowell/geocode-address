@@ -66,7 +66,8 @@ class MembersController < ApplicationController
   #
   def import
     Member.import(params[:file])
-    redirect_to members_path, notice: "Members imported!"
+    flash[:success] = "Members imported!"
+    redirect_to members_path
   end
 
   private

@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
-  # geocoded_by :full_address, if: :longitude.nil? or :latitude.nil?
-  # after_validation :geocode, if: :address_changed?
+  geocoded_by :full_address, if: :longitude.nil? or :latitude.nil?
+  after_validation :geocode, if: :address_changed?
 
   # before_save do |member|
   #   member.first_name.upcase! if member.first_name
